@@ -2,74 +2,112 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        var dog = 8.0;
-        var cat = 3.6;
-        var paper = 764789;
+        int a = 20000;
+        byte b = 127;
+        short c = 32767;
+        long d = 92233634;
+        float f = 3.14f;
+        double g = 3.141592653;
 
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
+        System.out.println("Значение переменной a с типом int равно "+a);
+        System.out.println("Значение переменной b с типом byte равно "+b);
+        System.out.println("Значение переменной c с типом short равно "+c);
+        System.out.println("Значение переменной d с типом long равно "+d);
+        System.out.println("Значение переменной f с типом float равно "+f);
+        System.out.println("Значение переменной g с типом double равно "+g);
         System.out.println();
 
-        dog = dog + 4;
-        cat = cat + 4;
-        paper = paper + 4;
+        float h = 27.12f;
+        long k = 987678965549L;
+        double l = 2.786;
+        short m = 568;
+        short n = -159;
+        short p = 27897;
+        byte q = 67;
 
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
+        short firstClass = 23;
+        short secondClass = 27;
+        short thirdClass = 30;
+        float paperAmount = 480;
+        float paperPerStudent = paperAmount / (firstClass + secondClass + thirdClass);
+
+        System.out.println("На каждого ученика рассчитано "+paperPerStudent+" листов бумаги.");
         System.out.println();
 
-        dog = dog - 3.5;
-        cat = cat - 1.6;
-        paper = paper - 7639;
+        int bottlePerMinute = 16 / 2;
+        byte minutes = 20;
+        int dayMinutes = 86400;
+        int threeDaysMinutes = dayMinutes * 3;
+        int monthMinutes = dayMinutes * 31;
 
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
+        int minutesDone = minutes * bottlePerMinute;
+        int dayDone = dayMinutes * bottlePerMinute;
+        int threeDaysDone = threeDaysMinutes * bottlePerMinute;
+        int monthDone = monthMinutes * bottlePerMinute;
+
+        System.out.println("За 20 минут машина произвела "+minutesDone+" штук бутылок");
+        System.out.println("За 24 часа машина произвела "+dayDone+" штук бутылок");
+        System.out.println("За 3 дня машина произвела "+threeDaysDone+" штук бутылок");
+        System.out.println("За 31 день машина произвела "+monthDone+" штук бутылок");
         System.out.println();
 
-        var friend = 19;
-        System.out.println(friend);
-        friend = friend + 2;
-        System.out.println(friend);
-        friend = friend / 7;
-        System.out.println(friend);
+        byte whiteJarsPerClass = 2;
+        byte brownJarsPerClass = 4;
+        short jarsNeeded = 120;
+        int classesAmount = jarsNeeded / (whiteJarsPerClass + brownJarsPerClass);
+        int whiteJarsAmount = whiteJarsPerClass * classesAmount;
+        int brownJarsAmount = brownJarsPerClass * classesAmount;
+
+        System.out.println("В школе, где "+classesAmount+" классов, нужно "+whiteJarsAmount+" банок белой краски и "+brownJarsAmount+" банок коричневой краски");
         System.out.println();
 
-        var frog = 3.5;
-        System.out.println(frog);
-        frog = frog * 10;
-        System.out.println(frog);
-        frog = frog / 3.5;
-        System.out.println(frog);
-        frog = frog + 4;
-        System.out.println(frog);
+        short gramsBanana = 80;
+        short gramsMilk = 105;
+        short gramsIceCream = 100;
+        short gramsRawEgg = 70;
+
+        short amountBananas = 5;
+        short amountMilks = 200 / 100;
+        short amountIceCreams = 2;
+        short amountRawEggs = 4;
+
+        float gramsSalt = (gramsBanana * amountBananas) + (gramsMilk * amountMilks) + (gramsIceCream * amountIceCreams) + (gramsRawEgg * amountRawEggs);
+        float kgSalt = gramsSalt / 1000;
+
+        System.out.println(kgSalt);
         System.out.println();
 
-        var firstGuyWeight = 78.2;
-        var secondGuyWeight = 82.7;
+        short kgToLose = 7;
+        int gramsToLose = kgToLose * 1000;
+        short minPerDay = 250;
+        short maxPerDay = 500;
+        float medPerDay = (float) (minPerDay + maxPerDay) / 2;
 
-        var bothGuysWeight = firstGuyWeight + secondGuyWeight;
-        System.out.println(bothGuysWeight);
+        int bestCaseDays = gramsToLose / maxPerDay;
+        int worstCaseDays = gramsToLose / minPerDay;
+        int realCaseDays = (int) (gramsToLose / medPerDay);
 
-        var weight_difference = secondGuyWeight - firstGuyWeight;
-        System.out.println(weight_difference);
+        System.out.println("Худеть придётся "+bestCaseDays+" дня/день/дней в лучшем случае");
+        System.out.println("Худеть придётся "+worstCaseDays+" дня/день/дней в худшом случае");
+        System.out.println("Худеть придётся "+realCaseDays+" дня/день/дней в среднем случае");
         System.out.println();
 
-        var divisionReminder = secondGuyWeight % firstGuyWeight;
-        System.out.println(divisionReminder);
+        double mashaPayment = 67760;
+        double denisPayment = 83690;
+        double krestinaPayment = 76230;
+
+        mashaPayment = mashaPayment * 1.1;
+        denisPayment = denisPayment * 1.1;
+        krestinaPayment = krestinaPayment * 1.1;
+
+        double mPaymentDiff = mashaPayment / 11;
+        double dPaymentDiff = denisPayment / 11;
+        double kPaymentDiff = krestinaPayment / 11;
+
+        System.out.println("Маша теперь получает "+mashaPayment+" рублей. Годовой доход вырос на "+mPaymentDiff+" рублей");
+        System.out.println("Денис теперь получает "+denisPayment+" рублей. Годовой доход вырос на "+dPaymentDiff+" рублей");
+        System.out.println("Крестина теперь получает "+krestinaPayment+" рублей. Годовой доход вырос на "+kPaymentDiff+" рублей");
         System.out.println();
 
-        var globalHoursToWork = 640;
-        var singleHoursToWork = 8;
-        var employeesAmount = globalHoursToWork / singleHoursToWork;
-        System.out.println("Всего работников в компании — " + employeesAmount + " человек");
-        System.out.println();
-
-        var extraEmployeesAmount = 94;
-        employeesAmount = employeesAmount + extraEmployeesAmount;
-        var extraSingleHoursToWork = globalHoursToWork / employeesAmount;
-        System.out.println("Если в компании работает "+employeesAmount+" человек, то всего "+extraSingleHoursToWork+" часов работы может быть поделено между сотрудниками");
     }
 }
