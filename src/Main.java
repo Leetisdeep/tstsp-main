@@ -2,112 +2,92 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int a = 20000;
-        byte b = 127;
-        short c = 32767;
-        long d = 92233634;
-        float f = 3.14f;
-        double g = 3.141592653;
+        short age = 18;
 
-        System.out.println("Значение переменной a с типом int равно "+a);
-        System.out.println("Значение переменной b с типом byte равно "+b);
-        System.out.println("Значение переменной c с типом short равно "+c);
-        System.out.println("Значение переменной d с типом long равно "+d);
-        System.out.println("Значение переменной f с типом float равно "+f);
-        System.out.println("Значение переменной g с типом double равно "+g);
+        System.out.print("Если возраст человека равен "+age+", ");
+        if (age >= 18) {
+            System.out.println("он совершеннолетний");
+        }
+        else {
+            System.out.println("он не достиг совершеннолетия, нужно немного подождать");
+        }
         System.out.println();
 
-        float h = 27.12f;
-        long k = 987678965549L;
-        double l = 2.786;
-        short m = 568;
-        short n = -159;
-        short p = 27897;
-        byte q = 67;
+        short temperature = 6;
 
-        short firstClass = 23;
-        short secondClass = 27;
-        short thirdClass = 30;
-        float paperAmount = 480;
-        float paperPerStudent = paperAmount / (firstClass + secondClass + thirdClass);
-
-        System.out.println("На каждого ученика рассчитано "+paperPerStudent+" листов бумаги.");
+        System.out.print("На улице "+temperature+" градусов, ");
+        if (temperature <= 5) {
+            System.out.println("нужно надеть шапку");
+            System.out.println("На улице холодно, нужно надеть шапку");
+        }
+        else {
+            System.out.println("можно идти без шапки");
+            System.out.println("Сегодня тепло, можно идти без шапки");
+        }
         System.out.println();
 
-        int bottlePerMinute = 16 / 2;
-        byte minutes = 20;
-        int dayMinutes = 86400;
-        int threeDaysMinutes = dayMinutes * 3;
-        int monthMinutes = dayMinutes * 31;
+        short speed = 40;
 
-        int minutesDone = minutes * bottlePerMinute;
-        int dayDone = dayMinutes * bottlePerMinute;
-        int threeDaysDone = threeDaysMinutes * bottlePerMinute;
-        int monthDone = monthMinutes * bottlePerMinute;
-
-        System.out.println("За 20 минут машина произвела "+minutesDone+" штук бутылок");
-        System.out.println("За 24 часа машина произвела "+dayDone+" штук бутылок");
-        System.out.println("За 3 дня машина произвела "+threeDaysDone+" штук бутылок");
-        System.out.println("За 31 день машина произвела "+monthDone+" штук бутылок");
+        System.out.print("Если скорость "+speed+", то ");
+        if (speed >= 60) {
+            System.out.println("придется заплатить штраф");
+        }
+        else {
+            System.out.println("можно ездить спокойнои");
+        }
         System.out.println();
 
-        byte whiteJarsPerClass = 2;
-        byte brownJarsPerClass = 4;
-        short jarsNeeded = 120;
-        int classesAmount = jarsNeeded / (whiteJarsPerClass + brownJarsPerClass);
-        int whiteJarsAmount = whiteJarsPerClass * classesAmount;
-        int brownJarsAmount = brownJarsPerClass * classesAmount;
+        short cAge = 25;
 
-        System.out.println("В школе, где "+classesAmount+" классов, нужно "+whiteJarsAmount+" банок белой краски и "+brownJarsAmount+" банок коричневой краски");
+        System.out.print("Если возраст человека равен "+cAge+", то ему нужно ходить ");
+        if (2 <= cAge && cAge <= 6) {
+            System.out.println("в детский сад");
+        } else if (7 <= cAge && cAge <= 17) {
+            System.out.println("в школу");
+        } else if (18 <= cAge && cAge <= 24) {
+            System.out.println("в университет");
+        }
+        else {
+            System.out.println("на работу");
+        }
         System.out.println();
 
-        short gramsBanana = 80;
-        short gramsMilk = 105;
-        short gramsIceCream = 100;
-        short gramsRawEgg = 70;
+        short pAge = 25;
 
-        short amountBananas = 5;
-        short amountMilks = 200 / 100;
-        short amountIceCreams = 2;
-        short amountRawEggs = 4;
-
-        float gramsSalt = (gramsBanana * amountBananas) + (gramsMilk * amountMilks) + (gramsIceCream * amountIceCreams) + (gramsRawEgg * amountRawEggs);
-        float kgSalt = gramsSalt / 1000;
-
-        System.out.println(kgSalt);
+        System.out.print("Если возраст ребенка равен "+pAge+", то ему ");
+        if (pAge <= 5) {
+            System.out.println("нельзя кататься на аттракционе");
+        } else if (5 <= pAge && pAge <= 14) {
+            System.out.println("можно кататься на аттракционе в сопровождении взрослого");
+        } else {
+            System.out.println("можно кататься без сопровождения взрослого");
+        }
         System.out.println();
 
-        short kgToLose = 7;
-        int gramsToLose = kgToLose * 1000;
-        short minPerDay = 250;
-        short maxPerDay = 500;
-        float medPerDay = (float) (minPerDay + maxPerDay) / 2;
+        short trainCap = 102;
+        short trainSittingCap = 60;
+        short usersAmount = 61;
 
-        int bestCaseDays = gramsToLose / maxPerDay;
-        int worstCaseDays = gramsToLose / minPerDay;
-        int realCaseDays = (int) (gramsToLose / medPerDay);
-
-        System.out.println("Худеть придётся "+bestCaseDays+" дня/день/дней в лучшем случае");
-        System.out.println("Худеть придётся "+worstCaseDays+" дня/день/дней в худшом случае");
-        System.out.println("Худеть придётся "+realCaseDays+" дня/день/дней в среднем случае");
+        if (usersAmount <= trainSittingCap) {
+            System.out.println("Есть место в вагоне, сидячее");
+        } else if (usersAmount <= trainCap) {
+            System.out.println("Есть место в вагоне, cтоячее");
+        }
+        else {
+            System.out.println("Вагон уже полностью забит");
+        }
         System.out.println();
 
-        double mashaPayment = 67760;
-        double denisPayment = 83690;
-        double krestinaPayment = 76230;
+        int one = 5;
+        int two = 1;
+        int three = 3;
 
-        mashaPayment = mashaPayment * 1.1;
-        denisPayment = denisPayment * 1.1;
-        krestinaPayment = krestinaPayment * 1.1;
-
-        double mPaymentDiff = mashaPayment / 11;
-        double dPaymentDiff = denisPayment / 11;
-        double kPaymentDiff = krestinaPayment / 11;
-
-        System.out.println("Маша теперь получает "+mashaPayment+" рублей. Годовой доход вырос на "+mPaymentDiff+" рублей");
-        System.out.println("Денис теперь получает "+denisPayment+" рублей. Годовой доход вырос на "+dPaymentDiff+" рублей");
-        System.out.println("Крестина теперь получает "+krestinaPayment+" рублей. Годовой доход вырос на "+kPaymentDiff+" рублей");
-        System.out.println();
-
+        if (one > two && one > three) {
+            System.out.println(one);
+        } else if (two > three) {
+            System.out.println(two);
+        }else {
+            System.out.println(three);
+        }
     }
 }
