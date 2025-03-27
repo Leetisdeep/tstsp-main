@@ -37,14 +37,14 @@ public class Main {
         }
         System.out.println();
 
-        short cAge = 25;
+        short childAge = 25;
 
-        System.out.print("Если возраст человека равен "+cAge+", то ему нужно ходить ");
-        if (2 <= cAge && cAge <= 6) {
+        System.out.print("Если возраст человека равен "+ childAge +", то ему нужно ходить ");
+        if (2 <= childAge && childAge <= 6) {
             System.out.println("в детский сад");
-        } else if (7 <= cAge && cAge <= 17) {
+        } else if (7 <= childAge && childAge <= 17) {
             System.out.println("в школу");
-        } else if (18 <= cAge && cAge <= 24) {
+        } else if (18 <= childAge && childAge <= 24) {
             System.out.println("в университет");
         }
         else {
@@ -52,25 +52,25 @@ public class Main {
         }
         System.out.println();
 
-        short pAge = 25;
+        short customerAge = 25;
 
-        System.out.print("Если возраст ребенка равен "+pAge+", то ему ");
-        if (pAge <= 5) {
+        System.out.print("Если возраст ребенка равен "+ customerAge +", то ему ");
+        if (customerAge <= 5) {
             System.out.println("нельзя кататься на аттракционе");
-        } else if (5 <= pAge && pAge <= 14) {
+        } else if (5 <= customerAge && customerAge <= 14) {
             System.out.println("можно кататься на аттракционе в сопровождении взрослого");
         } else {
             System.out.println("можно кататься без сопровождения взрослого");
         }
         System.out.println();
 
-        short trainCap = 102;
-        short trainSittingCap = 60;
-        short usersAmount = 61;
+        short trainCapacity = 102;
+        short trainSittingCapacity = 60;
+        short passengersAmount = 61;
 
-        if (usersAmount <= trainSittingCap) {
+        if (passengersAmount <= trainSittingCapacity) {
             System.out.println("Есть место в вагоне, сидячее");
-        } else if (usersAmount <= trainCap) {
+        } else if (passengersAmount <= trainCapacity) {
             System.out.println("Есть место в вагоне, cтоячее");
         }
         else {
