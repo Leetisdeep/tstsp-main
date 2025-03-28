@@ -40,10 +40,12 @@ public class Main {
 
         if (deliveryDistance > 100) {
             System.out.println("доставки нет");
-        } else if (deliveryDistance <= 20) {
+        }else if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: 1");
+        }else if (deliveryDistance <= 60) {
+            System.out.println("Потребуется дней: 2");
         }else {
-            System.out.println("Потребуется дней: "+deliveryDistance/40);
+            System.out.println("Потребуется дней: 3");
         }
         System.out.println();
 
