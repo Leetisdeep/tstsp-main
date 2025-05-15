@@ -1,53 +1,42 @@
-import java.sql.Array;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        int [] nums = new int [3];
-        nums[0] = 1;
-        nums[1] = 2;
-        nums[2] = 3;
-
-        double [] doubles = {1.57, 7.654, 9.986};
-
-        int [] array = {1,1,2,3,5,8};
-
-        System.out.println(Arrays.toString(nums).replace("[", "").replace("]", ""));
-        System.out.println(Arrays.toString(doubles).replace("[", "").replace("]", ""));
-        System.out.println(Arrays.toString(array).replace("[", "").replace("]", ""));
-        System.out.println();
-
-        for (int i = 0; i < nums.length/2; i++) {
-            int temp = nums[i];
-            nums[i] = nums[nums.length - i - 1];
-            nums[nums.length - i - 1] = temp;
+        int[] expenses = {1000,200,5000,350,20000};
+        int expensesSum = 0;
+        for (int expens : expenses){
+            expensesSum += expens;
         }
+        System.err.println("Сумма трат за месяц составила "+expensesSum+" рублей");
+        System.err.println();
 
-        for (int i = 0; i < doubles.length/2; i++) {
-            double temp = doubles[i];
-            doubles[i] = doubles[doubles.length - i - 1];
-            doubles[doubles.length - i - 1] = temp;
-        }
+        int minExpens = expenses[0];
+        int maxExpens = expenses[0];
 
-        for (int i = 0; i < array.length/2; i++) {
-            int temp = array[i];
-            array[i] = array[array.length - i - 1];
-            array[array.length - i - 1] = temp;
-        }
-
-        System.out.println(Arrays.toString(nums).replace("[", "").replace("]", ""));
-        System.out.println(Arrays.toString(doubles).replace("[", "").replace("]", ""));
-        System.out.println(Arrays.toString(array).replace("[", "").replace("]", ""));
-        System.out.println();
-
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] % 2 != 0) {
-                nums[i] += 1;
+        for (int expens : expenses){
+            if (expens > maxExpens){
+                maxExpens = expens;
+            }
+            else if (expens < minExpens){
+                minExpens = expens;
             }
         }
-        System.out.println(Arrays.toString(nums).replace("[", "").replace("]", ""));
+        System.err.println("Минимальная сумма трат за неделю составила "+minExpens+" рублей. Максимальная сумма трат за неделю составила "+maxExpens+" рублей");
+        System.err.println();
+
+        double averageExpens = expensesSum / expenses.length;
+        System.err.println("Средняя сумма трат за месяц составила "+averageExpens+" рублей");
+        System.err.println();
+
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        String fixedName = "";
+
+        for (int i=reverseFullName.length-1; i >= 0 ; i--){
+            fixedName += reverseFullName[i];
+        }
+        System.err.println(fixedName);
+        System.err.println();
+
+
     }
+
 }
