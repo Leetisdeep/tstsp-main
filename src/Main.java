@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 
 public class Main {
     
@@ -27,20 +28,21 @@ public class Main {
     
     public static int getDeliveryDistance(int deliveryDistance){
         if (deliveryDistance > 100) {
-            return-1;//нет доставки
-        } else if (deliveryDistance <= 20) {
+            return -1;
+        }else if (deliveryDistance <= 20) {
             return 1;
-        }else {
-            return deliveryDistance/40;
+        }else if (deliveryDistance <= 60) {
+            return 2;
         }
+        return 3;
     }
     
     public static void main(String[] args) {
-        int year = 2025;
+        int currentYear = LocalDate.now().getYear(); 
+        isLeapYear(currentYear);
         
-        isLeapYear(year);
-        
-        whichApp(1,year);
+        currentYear = LocalDate.now().getYear(); 
+        whichApp(1,currentYear);
         
         System.out.println(getDeliveryDistance(95));
 
