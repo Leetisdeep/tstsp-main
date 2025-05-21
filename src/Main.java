@@ -68,7 +68,7 @@ public class Main {
         Employee[] storage = generateEmployees(10);
 
         printEmployeesData(storage);
-        System.out.println(calculateSpending(storage));
+        System.out.println("Затраты "+calculateSpending(storage));
         System.out.println("Сотрудник с наименьшой ЗП "+findMinSalary(storage).toString());
         System.out.println("Сотрудник с наибольшой ЗП "+findMaxSalary(storage).toString());
         System.out.println("Средняя ЗП среди сотрудников "+findAverageSalary(storage));
