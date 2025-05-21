@@ -11,8 +11,8 @@ public class Main {
         return newEmployee;
     }
 
-    public static Employee[] generateEmployees(){
-        Employee[] employees = {null,null,null,null,null,null,null,null,null,null};
+    public static Employee[] generateEmployees(int amount){
+        Employee[] employees = new Employee[amount];
         for (int i = 0; i < 10; i++) {
             employees[i] = generateEmployee(i);
         }
@@ -65,7 +65,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Employee[] storage = generateEmployees();
+        Employee[] storage = generateEmployees(10);
 
         printEmployeesData(storage);
         System.out.println(calculateSpending(storage));
