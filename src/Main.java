@@ -13,7 +13,7 @@ public class Main {
 
     public static Employee[] generateEmployees(int amount){
         Employee[] employees = new Employee[amount];
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < amount; i++) {
             employees[i] = generateEmployee(i);
         }
         return employees;
