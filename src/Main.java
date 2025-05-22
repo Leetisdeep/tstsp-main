@@ -2,12 +2,12 @@
 public class Main {
 
     public static Employee generateEmployee(int id){
-        Employee newEmployee = new Employee();
-        newEmployee.setFirstName("firstName"+id);
-        newEmployee.setMiddleName("middleName"+id);
-        newEmployee.setLastName("lastName"+id);
-        newEmployee.setSalary(id * 1000);
-        newEmployee.setDepartment(1);
+        Employee newEmployee = new Employee("lastName"+id,
+                                            "middleName"+id, 
+                                            "firstName"+id, 
+                                            1, 
+                                            id*1000
+                                            );
         return newEmployee;
     }
 
@@ -15,6 +15,7 @@ public class Main {
         Employee[] employees = new Employee[amount];
         for (int i = 0; i < amount; i++) {
             employees[i] = generateEmployee(i);
+            employees[i].setId(i);
         }
         return employees;
 
