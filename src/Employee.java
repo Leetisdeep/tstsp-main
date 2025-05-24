@@ -6,14 +6,18 @@ public class Employee {
     private String firstName; // имя
     private int department;
     private int salary;
-    private int id;
 
+    private int count = 0;
+    private int id;
+    
     public Employee(String lastName, String middleName, String firstName, int department, int salary) {
         this.lastName = lastName;
         this.middleName = middleName;
         this.firstName = firstName;
         this.department = department;
         this.salary = salary;
+        this.id = count;
+        count += 1;
     }
 
     public String getLastName() {
@@ -56,14 +60,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    public int getId() {
-        return this.id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (o == this)
@@ -89,7 +85,6 @@ public class Employee {
             ", firstName='" + getFirstName() + "'" +
             ", department='" + getDepartment() + "'" +
             ", salary='" + getSalary() + "'" +
-            ", id='" + getId() + "'" + 
             "}";
     }
 

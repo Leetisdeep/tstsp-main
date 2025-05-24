@@ -15,7 +15,6 @@ public class Main {
         Employee[] employees = new Employee[amount];
         for (int i = 0; i < amount; i++) {
             employees[i] = generateEmployee(i);
-            employees[i].setId(i);
         }
         return employees;
 
