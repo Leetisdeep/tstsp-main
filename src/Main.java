@@ -1,77 +1,41 @@
-
 public class Main {
-
-    public static Employee generateEmployee(int id){
-        Employee newEmployee = new Employee("lastName"+id,
-                                            "middleName"+id, 
-                                            "firstName"+id, 
-                                            1, 
-                                            id*1000
-                                            );
-        return newEmployee;
-    }
-
-    public static Employee[] generateEmployees(int amount){
-        Employee[] employees = new Employee[amount];
-        for (int i = 0; i < amount; i++) {
-            employees[i] = generateEmployee(i);
-        }
-        return employees;
-
-    }
-
-    public static void printEmployeesData(Employee[] employees){
-        for (Employee employee : employees) {
-            System.out.println(employee.toString());
-        }
-    }
-
-    public static double calculateSpending(Employee[] employees){
-        double spending = 0;
-        for (Employee employee : employees) {
-            spending += employee.getSalary();
-        }
-        return spending;
-    }
-
-    public static Employee findMinSalary(Employee[] employees){
-        Employee minSalaryEmployee = employees[0];
-        for (Employee employee : employees) {
-            if (employee.getSalary() < minSalaryEmployee.getSalary()){
-                minSalaryEmployee = employee;
-            }
-        }
-        return minSalaryEmployee;
-    }
-
-    public static Employee findMaxSalary(Employee[] employees){
-        Employee maxSalaryEmployee = employees[0];
-        for (Employee employee : employees) {
-            if (employee.getSalary() > maxSalaryEmployee.getSalary()){
-                maxSalaryEmployee = employee;
-            }
-        }
-        return maxSalaryEmployee;
-    }
-
-    public static double findAverageSalary(Employee[] employees){
-        return calculateSpending(employees) / employees.length;
-    }
-
-    public static void printAllNames(Employee[] employees){
-       for (Employee employee : employees) {
-            System.out.println("ФИО - " + employee.getLastName()+" "+employee.getFirstName()+" "+employee.getMiddleName());
-        } 
-    }
-
     public static void main(String[] args) {
-        Employee[] storage = generateEmployees(10);
 
-        printEmployeesData(storage);
-        System.out.println("Затраты "+calculateSpending(storage));
-        System.out.println("Сотрудник с наименьшой ЗП "+findMinSalary(storage).toString());
-        System.out.println("Сотрудник с наибольшой ЗП "+findMaxSalary(storage).toString());
-        System.out.println("Средняя ЗП среди сотрудников "+findAverageSalary(storage));
-        printAllNames(storage);
+        Gryffindor harry = new Gryffindor("Harry Potter", 90, 50, 85, 80, 95);
+        Gryffindor hermione = new Gryffindor("Hermione Granger", 95, 60, 90, 85, 80);
+        Gryffindor ron = new Gryffindor("Ron Weasley", 80, 40, 70, 75, 85);
+
+        Hufflepuff zachariah = new Hufflepuff("Zachariah Smith", 70, 30, 80, 85, 90);
+        Hufflepuff cedric = new Hufflepuff("Cedric Diggory", 85, 45, 90, 80, 85);
+        Hufflepuff justin = new Hufflepuff("Justin Finch-Fletchley", 75, 35, 85, 90, 80);
+
+        Ravenclaw cho = new Ravenclaw("Cho Chang", 80, 50, 90, 85, 80, 95);
+        Ravenclaw padma = new Ravenclaw("Padma Patil", 85, 55, 95, 90, 85, 80);
+        Ravenclaw marcus = new Ravenclaw("Marcus Belby", 75, 40, 80, 85, 90, 85);
+
+        Slytherin draco = new Slytherin("Draco Malfoy", 85, 50, 90, 80, 95, 85, 90);
+        Slytherin graham = new Slytherin("Graham Montague", 80, 45, 85, 90, 80, 80, 85);
+        Slytherin gregory = new Slytherin("Gregory Goyle", 70, 40, 80, 85, 75, 80, 90);
+
+        System.out.println("Harry Potter: " + harry.describeStudent());
+        System.out.println("Hermione Granger: " + hermione.describeStudent());
+        System.out.println("Cedric Diggory: " + cedric.describeStudent());
+        System.out.println("Cho Chang: " + cho.describeStudent());
+        System.out.println("Draco Malfoy: " + draco.describeStudent());
+
+        System.out.println("\nComparing Gryffindor students:");
+        harry.compareGryffindor(hermione);
+
+        System.out.println("\nComparing Hufflepuff students:");
+        cedric.compareHufflepuff(zachariah);
+
+        System.out.println("\nComparing Ravenclaw students:");
+        cho.compareRavenclaw(padma);
+
+        System.out.println("\nComparing Slytherin students:");
+        draco.compareSlytherin(graham);
+
+        System.out.println("\nComparing Hogwarts students:");
+        harry.compareHogwartsStudents(draco);
     }
 }
