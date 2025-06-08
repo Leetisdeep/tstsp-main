@@ -1,75 +1,41 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        var dog = 8.0;
-        var cat = 3.6;
-        var paper = 764789;
 
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
-        System.out.println();
+        Gryffindor harry = new Gryffindor("Harry Potter", 90, 50, 85, 80, 95);
+        Gryffindor hermione = new Gryffindor("Hermione Granger", 95, 60, 90, 85, 80);
+        Gryffindor ron = new Gryffindor("Ron Weasley", 80, 40, 70, 75, 85);
 
-        dog = dog + 4;
-        cat = cat + 4;
-        paper = paper + 4;
+        Hufflepuff zachariah = new Hufflepuff("Zachariah Smith", 70, 30, 80, 85, 90);
+        Hufflepuff cedric = new Hufflepuff("Cedric Diggory", 85, 45, 90, 80, 85);
+        Hufflepuff justin = new Hufflepuff("Justin Finch-Fletchley", 75, 35, 85, 90, 80);
 
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
-        System.out.println();
+        Ravenclaw cho = new Ravenclaw("Cho Chang", 80, 50, 90, 85, 80, 95);
+        Ravenclaw padma = new Ravenclaw("Padma Patil", 85, 55, 95, 90, 85, 80);
+        Ravenclaw marcus = new Ravenclaw("Marcus Belby", 75, 40, 80, 85, 90, 85);
 
-        dog = dog - 3.5;
-        cat = cat - 1.6;
-        paper = paper - 7639;
+        Slytherin draco = new Slytherin("Draco Malfoy", 85, 50, 90, 80, 95, 85, 90);
+        Slytherin graham = new Slytherin("Graham Montague", 80, 45, 85, 90, 80, 80, 85);
+        Slytherin gregory = new Slytherin("Gregory Goyle", 70, 40, 80, 85, 75, 80, 90);
 
-        System.out.println(dog);
-        System.out.println(cat);
-        System.out.println(paper);
-        System.out.println();
+        System.out.println("Harry Potter: " + harry.describeStudent());
+        System.out.println("Hermione Granger: " + hermione.describeStudent());
+        System.out.println("Cedric Diggory: " + cedric.describeStudent());
+        System.out.println("Cho Chang: " + cho.describeStudent());
+        System.out.println("Draco Malfoy: " + draco.describeStudent());
 
-        var friend = 19;
-        System.out.println(friend);
-        friend = friend + 2;
-        System.out.println(friend);
-        friend = friend / 7;
-        System.out.println(friend);
-        System.out.println();
+        System.out.println("\nComparing Gryffindor students:");
+        harry.compareGryffindor(hermione);
 
-        var frog = 3.5;
-        System.out.println(frog);
-        frog = frog * 10;
-        System.out.println(frog);
-        frog = frog / 3.5;
-        System.out.println(frog);
-        frog = frog + 4;
-        System.out.println(frog);
-        System.out.println();
+        System.out.println("\nComparing Hufflepuff students:");
+        cedric.compareHufflepuff(zachariah);
 
-        var firstGuyWeight = 78.2;
-        var secondGuyWeight = 82.7;
+        System.out.println("\nComparing Ravenclaw students:");
+        cho.compareRavenclaw(padma);
 
-        var bothGuysWeight = firstGuyWeight + secondGuyWeight;
-        System.out.println(bothGuysWeight);
+        System.out.println("\nComparing Slytherin students:");
+        draco.compareSlytherin(graham);
 
-        var weight_difference = secondGuyWeight - firstGuyWeight;
-        System.out.println(weight_difference);
-        System.out.println();
-
-        var divisionReminder = secondGuyWeight % firstGuyWeight;
-        System.out.println(divisionReminder);
-        System.out.println();
-
-        var globalHoursToWork = 640;
-        var singleHoursToWork = 8;
-        var employeesAmount = globalHoursToWork / singleHoursToWork;
-        System.out.println("Всего работников в компании — " + employeesAmount + " человек");
-        System.out.println();
-
-        var extraEmployeesAmount = 94;
-        employeesAmount = employeesAmount + extraEmployeesAmount;
-        var extraSingleHoursToWork = globalHoursToWork / employeesAmount;
-        System.out.println("Если в компании работает "+employeesAmount+" человек, то всего "+extraSingleHoursToWork+" часов работы может быть поделено между сотрудниками");
+        System.out.println("\nComparing Hogwarts students:");
+        harry.compareHogwartsStudents(draco);
     }
 }
